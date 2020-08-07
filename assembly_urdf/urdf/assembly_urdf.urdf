@@ -3,21 +3,21 @@
      Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
 <robot
-  name="Assembly_URDF v6">
+  name="assembly_urdf">
   <link
     name="base_link">
     <inertial>
       <origin
-        xyz="-1.88332288303831E-05 0.163077243139101 -2.01206812296738E-08"
+        xyz="-1.88332288303835E-05 0.335041830979376 0.0672559512927368"
         rpy="0 0 0" />
       <mass
-        value="2.50216732502464" />
+        value="2.50216732502463" />
       <inertia
         ixx="0.0653823275083831"
-        ixy="1.06934829883646E-05"
-        ixz="-1.98536691802712E-08"
+        ixy="1.06934829883648E-05"
+        ixz="-1.98536691802048E-08"
         iyy="0.00548013594659747"
-        iyz="-8.39676000995102E-09"
+        iyz="-8.39676001019919E-09"
         izz="0.0665700447223665" />
     </inertial>
     <visual>
@@ -26,7 +26,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/base_link.STL" />
+          filename="package://assembly_urdf/meshes/base_link.STL" />
       </geometry>
       <material
         name="">
@@ -40,25 +40,25 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/base_link.STL" />
+          filename="package://assembly_urdf/meshes/base_link.STL" />
       </geometry>
     </collision>
   </link>
   <link
-    name="shaft_Link1">
+    name="shaft_link1">
     <inertial>
       <origin
-        xyz="-2.28346780373201E-08 0.0862779061401731 -0.000639254948745765"
+        xyz="-2.28346780373201E-08 0.0862779061401729 -0.000639254948745727"
         rpy="0 0 0" />
       <mass
-        value="0.0469199566609967" />
+        value="0.046919956660997" />
       <inertia
         ixx="0.000119663056281602"
-        ixy="-3.38099445013419E-11"
-        ixz="1.86974367383666E-11"
-        iyy="2.3411462214171E-06"
-        iyz="-9.48476256334187E-08"
-        izz="0.000119826953022064" />
+        ixy="-3.38099444967384E-11"
+        ixz="1.86974367336289E-11"
+        iyy="2.34114622141712E-06"
+        iyz="-9.48476256333392E-08"
+        izz="0.000119826953022065" />
     </inertial>
     <visual>
       <origin
@@ -66,7 +66,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/shaft_Link1.STL" />
+          filename="package://assembly_urdf/meshes/shaft_link1.STL" />
       </geometry>
       <material
         name="">
@@ -80,20 +80,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/shaft_Link1.STL" />
+          filename="package://assembly_urdf/meshes/shaft_link1.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="motor_1"
+    name="motor_link1"
     type="revolute">
     <origin
-      xyz="0.085 0 0.39"
+      xyz="0.085 -0.067256 0.56196"
       rpy="1.5708 -1.5708 0" />
     <parent
       link="base_link" />
     <child
-      link="shaft_Link1" />
+      link="shaft_link1" />
     <axis
       xyz="0 0 0" />
     <limit
@@ -106,16 +106,16 @@
     name="Link_2">
     <inertial>
       <origin
-        xyz="-0.00026050158922244 -0.00418554305359831 -1.76151432506244E-08"
+        xyz="-0.000260501589222445 -0.00418554305359831 -1.76151432450949E-08"
         rpy="0 0 0" />
       <mass
         value="2.23900935342226" />
       <inertia
         ixx="0.00651527634561222"
-        ixy="1.82478627012732E-05"
-        ixz="3.75604928548178E-09"
+        ixy="1.82478627012723E-05"
+        ixz="3.75604928471886E-09"
         iyy="0.00499823395365336"
-        iyz="-1.44186921277552E-08"
+        iyz="-1.44186921284753E-08"
         izz="0.00754178994678366" />
     </inertial>
     <visual>
@@ -124,7 +124,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/Link_2.STL" />
+          filename="package://assembly_urdf/meshes/Link_2.STL" />
       </geometry>
       <material
         name="">
@@ -138,15 +138,15 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/Link_2.STL" />
+          filename="package://assembly_urdf/meshes/Link_2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="pitch movement"
+    name="pitch_link"
     type="revolute">
     <origin
-      xyz="0.00028402 0.0066603 0.541"
+      xyz="0.00028402 -0.060596 0.71296"
       rpy="-1.5708 0 -1.5708" />
     <parent
       link="base_link" />
@@ -164,16 +164,16 @@
     name="shaft_link2">
     <inertial>
       <origin
-        xyz="-2.28346784814093E-08 0.0862779061401617 -0.000639254948745175"
+        xyz="-2.28346784814093E-08 0.0862779061401616 -0.000639254948745162"
         rpy="0 0 0" />
       <mass
-        value="0.0469199566610043" />
+        value="0.0469199566610044" />
       <inertia
         ixx="0.000119663056281604"
-        ixy="-3.38099442568599E-11"
-        ixz="1.86974367557585E-11"
+        ixy="-3.38099442054279E-11"
+        ixz="1.86974367409058E-11"
         iyy="2.3411462214172E-06"
-        iyz="-9.4847625632997E-08"
+        iyz="-9.48476256329531E-08"
         izz="0.000119826953022066" />
     </inertial>
     <visual>
@@ -182,7 +182,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/shaft_link2.STL" />
+          filename="package://assembly_urdf/meshes/shaft_link2.STL" />
       </geometry>
       <material
         name="">
@@ -196,12 +196,12 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/shaft_link2.STL" />
+          filename="package://assembly_urdf/meshes/shaft_link2.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="motor_2"
+    name="motor_link2"
     type="revolute">
     <origin
       xyz="0.085 -0.18 0"
@@ -213,25 +213,29 @@
     <axis
       xyz="0 0 0" />
     <limit
-      lower="-1.57079633"
-      upper="1.57079633"
+      lower="-1.5708"
+      upper="1.5708"
       effort="0"
       velocity="0" />
+    <mimic
+      joint="motor_link3"
+      multiplier="1"
+      offset="0" />
   </joint>
   <link
-    name="Link_3">
+    name="link_3">
     <inertial>
       <origin
-        xyz="0.00894239401770391 0.000280508075083926 -4.84079033716122E-05"
+        xyz="0.00894239401770391 0.000280508075083915 -4.84079033715931E-05"
         rpy="0 0 0" />
       <mass
         value="0.973698526007838" />
       <inertia
         ixx="0.00203345368620413"
-        ixy="-4.15867011984317E-06"
-        ixz="-4.19134011282013E-06"
-        iyy="0.00419113796679174"
-        iyz="-1.30677423527313E-08"
+        ixy="-4.15867011984283E-06"
+        ixz="-4.19134011282035E-06"
+        iyy="0.00419113796679173"
+        iyz="-1.30677423529018E-08"
         izz="0.00294630958867532" />
     </inertial>
     <visual>
@@ -240,7 +244,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/Link_3.STL" />
+          filename="package://assembly_urdf/meshes/link_3.STL" />
       </geometry>
       <material
         name="">
@@ -254,46 +258,42 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/Link_3.STL" />
+          filename="package://assembly_urdf/meshes/link_3.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="yaw movement"
+    name="yaw_link"
     type="revolute">
     <origin
-      xyz="-0.0013889 0.0063996 0.792"
+      xyz="-0.0013889 -0.060856 0.96396"
       rpy="0.2264 1.5708 -1.3444" />
     <parent
       link="base_link" />
     <child
-      link="Link_3" />
+      link="link_3" />
     <axis
       xyz="0 0 0" />
     <limit
-      lower="-1.57079633"
-      upper="1.57079633"
+      lower="-1.5708"
+      upper="1.5708"
       effort="0"
       velocity="0" />
-    <mimic
-      joint="yaw_move"
-      multiplier="1"
-      offset="0" />
   </joint>
   <link
     name="shaft_link3">
     <inertial>
       <origin
-        xyz="-2.28346782593647E-08 0.0862779061401836 -0.000639254945797939"
+        xyz="-2.2834678370387E-08 0.0862779061401833 -0.000639254945797905"
         rpy="0 0 0" />
       <mass
-        value="0.0469199566610041" />
+        value="0.0469199566610044" />
       <inertia
-        ixx="0.000119663056281603"
-        ixy="-3.38099444190241E-11"
-        ixz="1.86974367326263E-11"
-        iyy="2.34114622142366E-06"
-        iyz="-9.48476296463714E-08"
+        ixx="0.000119663056281604"
+        ixy="-3.38099445682339E-11"
+        ixz="1.86974367587241E-11"
+        iyy="2.34114622142368E-06"
+        iyz="-9.48476296462588E-08"
         izz="0.000119826953022059" />
     </inertial>
     <visual>
@@ -302,7 +302,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/shaft_link3.STL" />
+          filename="package://assembly_urdf/meshes/shaft_link3.STL" />
       </geometry>
       <material
         name="">
@@ -316,18 +316,18 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/shaft_link3.STL" />
+          filename="package://assembly_urdf/meshes/shaft_link3.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="motor_3"
+    name="motor_link3"
     type="revolute">
     <origin
       xyz="-0.08 0 0.085"
       rpy="-1.5708 0 0" />
     <parent
-      link="Link_3" />
+      link="link_3" />
     <child
       link="shaft_link3" />
     <axis
@@ -338,25 +338,25 @@
       effort="0"
       velocity="0" />
     <mimic
-      joint="motor_2"
+      joint="motor_link2"
       multiplier="1"
       offset="0" />
   </joint>
   <link
-    name="Gripper_link">
+    name="gripper_link">
     <inertial>
       <origin
-        xyz="0.0216976226908029 -0.122547144464513 0.0814178968872003"
+        xyz="0.0216976226907989 -0.122547144464517 0.0814178968871869"
         rpy="0 0 0" />
       <mass
-        value="0.822220892683506" />
+        value="0.822220892683325" />
       <inertia
-        ixx="0.00271143118949349"
-        ixy="7.85142372268063E-05"
-        ixz="-3.38432826092458E-07"
-        iyy="0.00174277915122354"
-        iyz="1.08542481268539E-06"
-        izz="0.00120037814165359" />
+        ixx="0.00271143118949264"
+        ixy="7.85142372267252E-05"
+        ixz="-3.38432825835257E-07"
+        iyy="0.00174277915122272"
+        iyz="1.08542481244002E-06"
+        izz="0.00120037814165339" />
     </inertial>
     <visual>
       <origin
@@ -364,7 +364,7 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/Gripper_link.STL" />
+          filename="package://assembly_urdf/meshes/gripper_link.STL" />
       </geometry>
       <material
         name="">
@@ -378,20 +378,20 @@
         rpy="0 0 0" />
       <geometry>
         <mesh
-          filename="package://Assembly_URDF v6/meshes/Gripper_link.STL" />
+          filename="package://assembly_urdf/meshes/gripper_link.STL" />
       </geometry>
     </collision>
   </link>
   <joint
-    name="yaw_move"
+    name="gripper_movement"
     type="revolute">
     <origin
-      xyz="-0.02769 0.086208 1.0682"
+      xyz="-0.02769 0.018952 1.2402"
       rpy="1.5708 0 0" />
     <parent
       link="base_link" />
     <child
-      link="Gripper_link" />
+      link="gripper_link" />
     <axis
       xyz="0 0 0" />
     <limit
@@ -399,9 +399,5 @@
       upper="1.5708"
       effort="0"
       velocity="0" />
-    <mimic
-      joint="yaw movement"
-      multiplier="1"
-      offset="0" />
   </joint>
 </robot>

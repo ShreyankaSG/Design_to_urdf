@@ -1,0 +1,1 @@
+controller_joint_names: ['', 'motor_link1', 'pitch_link', 'motor_link2', 'yaw_link', 'motor_link3', 'gripper_movement', ]
