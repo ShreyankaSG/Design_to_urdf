@@ -5,7 +5,9 @@ Place the generated _description package directory in your own ROS workspace. "c
 Then, run catkin_make in catkin_ws.
 
 cd ~/catkin_ws/
+
 catkin_make
+
 source devel/setup.bash
 
 Now you can see your robot in rviz. 
